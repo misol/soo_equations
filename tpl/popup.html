@@ -1,0 +1,10 @@
+<!--// responsible layout -->
+{Context::addMetaTag("viewport", "width=device-width, user-scalable=no")}
+{@Context::setBrowserTitle($component_info->title);}
+<!--%import("pop.css")-->
+<!--%import("../lang")-->
+<div id="bodyDiv">
+	<h1 id="title"><a href="#" onclick="toggle('helpDiv');return false;">{$component_info->title}</a></h1>
+	<div id="controlArea">
+	</div>
+</div>

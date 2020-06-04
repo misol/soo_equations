@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component version="0.2">
+	<title xml:lang="ko">수식 입력기</title>
+	<title xml:lang="en">Equation editor</title>
+	<description xml:lang="ko">수식을 편리하게 입력할 수 있도록 합니다.</description>
+	<description xml:lang="en">Equation editor for the Rhymix WYSIWYG editor</description>
+	<version>0.1</version>
+	<date>2020-06-04</date>
+	<license link="http://www.gnu.org/licenses/gpl-3.0.html">GPLv3</license>
+	<author email_address="misol.kr@gmail.com" link="https://github.com/misol">
+		<name xml:lang="ko">김민수(misol)</name>
+		<name xml:lang="en">Min-Soo Kim (misol)</name>
+	</author>
+	<extra_vars>
+	</extra_vars>
+</component>
