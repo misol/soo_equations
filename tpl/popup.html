@@ -1,10 +1,27 @@
+<load target="../lang" />
+<load target="../libs/mathquill-0.10.1/mathquill.js" type="body" />
+<load target="../libs/mathquill-0.10.1/mathquill.css" />
+
+<load target="../fronts/soo_equation.js" type="body" />
+<load target="../fronts/soo_equation.css" />
 <!--// responsible layout -->
 {Context::addMetaTag("viewport", "width=device-width, user-scalable=no")}
 {@Context::setBrowserTitle($component_info->title);}
-<!--%import("pop.css")-->
-<!--%import("../lang")-->
+
 <div id="bodyDiv">
-	<h1 id="title"><a href="#" onclick="toggle('helpDiv');return false;">{$component_info->title}</a></h1>
-	<div id="controlArea">
+	<h1 id="title">{$component_info->title}</h1>
+	<div class="controlArea">
+		<p>{lang('soo_typemath')}:</p>
+		<div id="math-field"></div>
+		
+		<p>{lang('soo_mathlatex')}: </p>
+		<textarea id="latex"></textarea>
+	</div>
+	<div id="previewArea">
+		<p>{lang('soo_mathpreview')}:</p>
+		<div id="preview-field"></div>
+	</div>
+	<div class="controlArea">
+		<a id="insertAction" href="#" onclick="insertEquation();return false;"><span>{$lang->cmd_insert_formula}</span></a>
 	</div>
 </div>

@@ -35,6 +35,24 @@ class soo_equations extends EditorHandler {
 	 * DocumentModule::transContent() would call the transHTML() method.
 	 **/
 	function transHTML($xml_obj) {
+		
+		//한 페이지 내에 수식 수
+		$math_count = intval(Context::get('pub_math_count'));
+		
+		if(!isset($math_count)) {
+			$math_count = 0;
+		} else {
+			$math_count = $math_count + 1;
+		}
+		Context::set('pub_math_count' , $math_count);
+		$latex = str_replace('\\', '\\\\', htmlentities(strip_tags(urldecode($xml_obj->attrs->alt)), ENT_QUOTES));
+		
+		Context::loadFile(array('./modules/editor/components/soo_equations/libs/mathquill-0.10.1/mathquill.js', 'body', '', null), true);
+		Context::loadFile(array('./modules/editor/components/soo_equations/libs/mathquill-0.10.1/mathquill.css', '', '', null), true);
+		Context::loadFile(array('./modules/editor/components/soo_equations/fronts/soo_equation_view.scss', '', '', null), true);
+		
+		$view_code = sprintf('<div id="preview-field-%u" class="soo_math_equations_area xe_content"></div><script>$(window).load(function() {var soo_MQ_%u = MathQuill.noConflict().getInterface(2);var soo_mathfield%u = soo_MQ_%u.StaticMath(document.getElementById(\'preview-field-%u\'));soo_mathfield%u.latex("%s");});</script>', $math_count, $math_count, $math_count, $math_count, $math_count, $math_count, $latex);
+		
 		return $view_code;
 	}
 

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lang>
+	<item name="soo_typemath">
+		<value xml:lang="ko">이 곳에 수식을 입력하세요.</value>
+		<value xml:lang="en">Type math here</value>
+	</item>
+	<item name="soo_mathlatex">
+		<value xml:lang="ko">변환된 LaTeX 코드</value>
+		<value xml:lang="en">Encoded LaTeX</value>
+	</item>
+	<item name="soo_mathpreview">
+		<value xml:lang="ko">입력 미리보기</value>
+		<value xml:lang="en">Input preview</value>
+	</item>
+	<item name="cmd_insert_formula">
+		<value xml:lang="ko">수식 넣기</value>
+		<value xml:lang="en">Insert math</value>
+	</item>
+</lang>

@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+body, html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: "맑은 고딕", "Apple SD Gothic Neo", "나눔고딕", NanumGothic, 'Nanum Gothic', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	background-color: #8e24aa;
+	color: #FFFFFF!important;
+	margin: 0!important;
+	padding: 11px 10px !important;
+	font-size: 29px;
+}
+address>a, h1>a, #insertAction {
+	text-decoration: none!important;
+	color: #FFFFFF!important;
+}
+#bodyDiv {
+	margin: 0 auto;
+	padding: 0;
+	width: 800px;
+	min-height: 455px;
+	overflow: hidden;
+}
+.controlArea, #previewArea {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px 10px;
+	float: left;
+}
+#latex, #math-field, #preview-field {
+	box-sizing: border-box;
+	width: 100%;
+	margin: 10px 0;
+	font-size: 17pt;
+}
+#latex {
+	line-height: 160%;
+}
+
+#insertAction {
+	box-sizing: border-box;
+	display: block;
+	height: 40px;
+	font-size: 15px;
+	text-align: center;
+	background-color: #8e8e93;
+	border: 0;
+}
+#insertAction>span {
+	vertical-align: -10px;
+}
+#insertAction:hover {
+	background-color: #474749;
+}
+@media all and (max-width: 700px) {
+	#bodyDiv {
+		margin: 0 auto;
+		padding: 0;
+		width: 100%;
+		height: auto;
+	}
+	div.popup {
+		max-width: 100%!important;
+	}
+}
