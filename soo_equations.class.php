@@ -51,7 +51,7 @@ class soo_equations extends EditorHandler {
 		Context::loadFile(array('./modules/editor/components/soo_equations/libs/mathquill-0.10.1/mathquill.css', '', '', null), true);
 		Context::loadFile(array('./modules/editor/components/soo_equations/fronts/soo_equation_view.scss', '', '', null), true);
 		
-		$view_code = sprintf('<div id="preview-field-%u" class="soo_math_equations_area xe_content"></div><script>$(window).load(function() {var soo_MQ_%u = MathQuill.noConflict().getInterface(2);var soo_mathfield%u = soo_MQ_%u.StaticMath(document.getElementById(\'preview-field-%u\'));soo_mathfield%u.latex("%s");});</script>', $math_count, $math_count, $math_count, $math_count, $math_count, $math_count, $latex);
+		$view_code = sprintf('<div id="preview-field-%u" class="soo_math_equations_area xe_content"></div><script>$(window).load(function() {var soo_MQ_%u = MathQuill.getInterface(2);var soo_mathfield%u = soo_MQ_%u.StaticMath(document.getElementById(\'preview-field-%u\'));soo_mathfield%u.latex("%s");});</script>', $math_count, $math_count, $math_count, $math_count, $math_count, $math_count, $latex);
 		
 		return $view_code;
 	}
